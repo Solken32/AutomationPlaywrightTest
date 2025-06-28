@@ -90,3 +90,11 @@ test('Login option2' , async({ page }) => {
     await page.pause();
 
 })
+
+
+test('usando .env - naviagation' , async({ page }) => {
+    //1. Acceder a la pagina de compras
+    await page.goto(process.env.URL);
+    await page.pause();
+
+})

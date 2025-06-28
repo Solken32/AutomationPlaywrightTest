@@ -32,6 +32,7 @@ export class LoginPage {
         await this.clickLogin();
     }
 
+    // aserciones son verificaciones que confirman que la app funciona como se espera.
     async checkSuccessfullLogin(){
         await expect(this.shoppingCartIcon).toBeVisible();
     }
