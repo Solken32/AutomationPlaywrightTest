@@ -77,24 +77,4 @@ test('Login' , async({ page }) => {
 
 })
 
-test('Login option2' , async({ page }) => {
-    //1. Acceder a la pagina de compras
-    await page.goto('https://www.saucedemo.com/');
-    //2. Ingresar credenciales e iniciar sesión
-    const login = new LoginPage(page);
-    await login.loginWhitCredentials('standard_user','secret_sauce')
 
-    //3. confirmar que se hizo login
-    await login.checkSuccessfullLogin();
-    
-    await page.pause();
-
-})
-
-
-test('usando .env - naviagation' , async({ page }) => {
-    //1. Acceder a la pagina de compras
-    await page.goto(process.env.URL);
-    await page.pause();
-
-})
