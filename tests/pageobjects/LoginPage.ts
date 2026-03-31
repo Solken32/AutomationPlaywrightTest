@@ -1,40 +1,39 @@
-import { expect, Locator, Page } from "@playwright/test";
+import { expect, Locator, Page } from '@playwright/test';
 
 export class LoginPage {
 
-    private readonly usernameTextbox: Locator
-    private readonly passwordTextbox: Locator
-    private readonly loginButton: Locator
-    private readonly shoppingCartIcon: Locator
+  private readonly page: Page;
+  private readonly usernameTextbox: Locator;
+  private readonly passwordTextbox: Locator;
+  private readonly loginButton: Locator;
+  private readonly shoppingCartIcon: Locator;
+  private readonly errorMessage: Locator;
 
-    constructor(page : Page){
-        this.usernameTextbox = page.getByRole('textbox', { name: 'Username' });
-        this.passwordTextbox = page.getByRole('textbox', { name: 'Password' });
-        this.loginButton = page.getByRole('button', { name: 'Login' });
-        this.shoppingCartIcon = page.locator("xpath=//a[contains(@class,'shopping_cart_link')]");
-    }
+  constructor(page: Page) {
+    this.page = page;
 
-    async fillUsername(username:string){
-        await this.usernameTextbox.fill(username);
-    }
+    this.usernameTextbox = page.getByRole('textbox', { name: 'Username' });
+    this.passwordTextbox = page.getByRole('textbox', { name: 'Password' });
+    this.loginButton = page.getByRole('button', { name: 'Login' });
+    this.shoppingCartIcon = page.locator('.shopping_cart_link');
+    this.errorMessage = page.locator('[data-test="error"]');
+  }
 
-    async fillPassword(password : string){
-        await this.passwordTextbox.fill(password);
-    }
+  async navigate() {
+    await this.page.goto('https://www.saucedemo.com/');
+  }
 
-    async clickLogin(){
-        await this.loginButton.click();
-    }
+  async loginWithCredentials(username: string, password: string) {
+    await this.usernameTextbox.fill(username);
+    await this.passwordTextbox.fill(password);
+    await this.loginButton.click();
+  }
 
-    async loginWhitCredentials(username: string , password: string){
-        await this.fillUsername(username);
-        await this.fillPassword(password);
-        await this.clickLogin();
-    }
+  async validateSuccessfulLogin() {
+    await expect(this.shoppingCartIcon).toBeVisible();
+  }
 
-    // aserciones son verificaciones que confirman que la app funciona como se espera.
-    async checkSuccessfullLogin(){
-        await expect(this.shoppingCartIcon).toBeVisible();
-    }
-
+  async validateErrorLogin() {
+    await expect(this.errorMessage).toBeVisible();
+  }
 }

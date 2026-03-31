@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="28.307" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-03-31T04:39:05.117Z">
+  <testcase classname="Carrito de compras" name="Comprar un producto correctamente" time="13.139">
+    <system-out><![CDATA[Given que el usuario accede a la tienda.....................................passed
+When inicia sesión con usuario "standard_user" y password "secret_sauce"....passed
+And agrega un producto aleatorio al carrito.................................passed
+And va al carrito...........................................................passed
+Then el producto agregado debe ser correcto.................................passed
+When completa el checkout...................................................passed
+Then la compra se realiza exitosamente......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Login de usuario" name="Validación de login - #1.1" time="7.82">
+    <system-out><![CDATA[Given que el usuario accede a la tienda.....................................passed
+When inicia sesión con usuario "standard_user" y password "secret_sauce"....passed
+Then valida el resultado "success"..........................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Login de usuario" name="Validación de login - #1.2" time="7.306">
+    <system-out><![CDATA[Given que el usuario accede a la tienda.....................................passed
+When inicia sesión con usuario "locked_out_user" y password "secret_sauce"..passed
+Then valida el resultado "error"............................................passed]]></system-out>
+  </testcase>
+</testsuite>

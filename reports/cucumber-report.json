@@ -1,0 +1,307 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "carrito-de-compras;comprar-un-producto-correctamente",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Comprar un producto correctamente",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 2035633899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "que el usuario accede a la tienda",
+            "match": {
+              "location": "tests\\steps\\carrito.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3527644700
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "inicia sesión con usuario \"standard_user\" y password \"secret_sauce\"",
+            "match": {
+              "location": "tests\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1922492199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "agrega un producto aleatorio al carrito",
+            "match": {
+              "location": "tests\\steps\\carrito.steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 702172099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "va al carrito",
+            "match": {
+              "location": "tests\\steps\\carrito.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 597443299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "el producto agregado debe ser correcto",
+            "match": {
+              "location": "tests\\steps\\carrito.steps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 49926099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "completa el checkout",
+            "match": {
+              "location": "tests\\steps\\carrito.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3322493799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "la compra se realiza exitosamente",
+            "match": {
+              "location": "tests\\steps\\carrito.steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8313099
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 939313099
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CA-02",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "carrito-de-compras",
+    "line": 3,
+    "keyword": "Feature",
+    "name": "Carrito de compras",
+    "tags": [
+      {
+        "name": "@CA-02",
+        "line": 1
+      }
+    ],
+    "uri": "tests\\features\\carrito.feature"
+  },
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-de-usuario;validación-de-login",
+        "keyword": "Scenario Outline",
+        "line": 12,
+        "name": "Validación de login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1616483299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "que el usuario accede a la tienda",
+            "match": {
+              "location": "tests\\steps\\carrito.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3396904199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "inicia sesión con usuario \"standard_user\" y password \"secret_sauce\"",
+            "match": {
+              "location": "tests\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1758597799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "valida el resultado \"success\"",
+            "match": {
+              "location": "tests\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 42223500
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 987125299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CA-01",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-de-usuario;validación-de-login",
+        "keyword": "Scenario Outline",
+        "line": 13,
+        "name": "Validación de login",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1337679299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "que el usuario accede a la tienda",
+            "match": {
+              "location": "tests\\steps\\carrito.steps.ts:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3579079600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 7,
+            "name": "inicia sesión con usuario \"locked_out_user\" y password \"secret_sauce\"",
+            "match": {
+              "location": "tests\\steps\\login.steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1707848900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "valida el resultado \"error\"",
+            "match": {
+              "location": "tests\\steps\\login.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24995999
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 651267299
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@CA-01",
+            "line": 1
+          },
+          {
+            "name": "@login",
+            "line": 4
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-de-usuario",
+    "line": 3,
+    "keyword": "Feature",
+    "name": "Login de usuario",
+    "tags": [
+      {
+        "name": "@CA-01",
+        "line": 1
+      }
+    ],
+    "uri": "tests\\features\\login.feature"
+  }
+]
