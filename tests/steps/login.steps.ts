@@ -3,18 +3,13 @@ import { CustomWorld } from '../support/world';
 import { LoginPage } from '../pageobjects/LoginPage';
 
 
-When(
-  'inicia sesión con usuario {string} y password {string}',
-  async function (this: CustomWorld, user, pass) {
+When('inicia sesión con usuario {string} y password {string}',async function (this: CustomWorld, user, pass) {
     const login = new LoginPage(this.page);
     await login.loginWithCredentials(user, pass);
-  }
-);
+});
 
 
-Then(
-  'valida el resultado {string}',
-  async function (this: CustomWorld, resultado: string) {
+Then('valida el resultado {string}', async function (this: CustomWorld, resultado: string) {
     const login = new LoginPage(this.page);
 
     if (resultado === 'success') {
@@ -22,5 +17,4 @@ Then(
     } else if (resultado === 'error') {
       await login.validateErrorLogin();
     }
-  }
-);
+});

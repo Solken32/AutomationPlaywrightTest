@@ -7,7 +7,10 @@ Feature: Login de usuario
     When inicia sesión con usuario "<user>" y password "<pass>"
     Then valida el resultado "<resultado>"
 
-  Examples:
-    | user            | pass          | resultado |
-    | standard_user   | secret_sauce | success   |
-    | locked_out_user | secret_sauce | error     |
+    Examples:
+      | user            | pass          | resultado |
+      | standard_user   | secret_sauce | success   |
+      | locked_out_user | secret_sauce | error     |
+
+
+  

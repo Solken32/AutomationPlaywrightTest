@@ -2,11 +2,13 @@ import { Given, When, Then } from '@cucumber/cucumber';
 import { CustomWorld } from '../support/world';
 import { InventoryPage } from '../pageobjects/InventoryPage';
 import { CartPage } from '../pageobjects/CartPage';
+import { LoginPage } from '../pageobjects/LoginPage';
 
 let product: any;
 
 Given('que el usuario accede a la tienda', async function (this: CustomWorld) {
-  await this.page.goto('https://www.saucedemo.com/');
+  const login = new LoginPage(this.page);
+  await login.navigate();
 });
 
 When('agrega un producto aleatorio al carrito', async function (this: CustomWorld) {

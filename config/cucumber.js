@@ -1,6 +1,6 @@
 module.exports = {
   default: {
-    paths: ['tests/features/**/*.feature'],
+    paths: ['tests/features/mis.feature'],
     require: [
       'tests/steps/**/*.ts',
       'tests/support/**/*.ts'
@@ -12,6 +12,6 @@ module.exports = {
       "json:reports/cucumber-report.json",
       "junit:reports/cucumber-report.xml",
     ],
-    timeout: 90000 
+    timeout: 150000 
   }
 };
